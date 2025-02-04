@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quicklist Lista de compras</title>
+    <link rel="stylesheet" href="./src/styles/index.css" />
+    <script src="./src/scripts/index.js" defer></script>
+  </head>
+  <body>
+    <div id="App">
+      <main class="Container">
+        <header class="Status-Bar">
+          <div class="Time">
+            <img src="./src/assets/9_41.svg" alt="9_41.svg" />
+          </div>
+          <div class="Status-Icons">
+            <img src="./src/assets/dados.svg" alt="dados.svg" />
+            <img src="./src/assets/Light.svg" alt="Light.svg" />
+            <img src="./src/assets/batery.svg" alt="batery.svg" />
+          </div>
+        </header>
+
+        <section class="Content">
+          <div class="Content-Header">
+            <span> <- Voltar </span>
+          </div>
+          <h1>Compras da semana</h1>
+
+          <form>
+            <input type="text" placeholder="Adicione um novo item" />
+            <button type="submit">Adicionar item</button>
+          </form>
+
+          <ul class="list">
+            <li class="itens">
+              <div class="checkbox-image"></div>
+              <input type="checkbox" name="select-item" id="select-item-1" />
+              <div class="item">
+                <p>Pão de forma</p>
+              </div>
+              <div class="delete-item">
+                <button></button>
+              </div>
+            </li>
+
+            <li class="itens">
+              <div class="checkbox-image"></div>
+              <input type="checkbox" name="select-item" id="select-item-2" />
+              <div class="item">
+                <p>Café preto</p>
+              </div>
+              <div class="delete-item">
+                <button></button>
+              </div>
+            </li>
+
+            <li class="itens">
+              <div class="checkbox-image"></div>
+              <input type="checkbox" name="select-item" id="select-item-3" />
+              <div class="item">
+                <p>Suco de laranja</p>
+              </div>
+              <div class="delete-item">
+                <button></button>
+              </div>
+            </li>
+
+            <li class="itens">
+              <div class="checkbox-image"></div>
+              <input type="checkbox" name="select-item" id="select-item-4" />
+              <div class="item">
+                <p>Bolacha</p>
+              </div>
+              <div class="delete-item">
+                <button></button>
+              </div>
+            </li>
+          </ul>
+
+          <span class="alert">
+            <img
+              src="./src/assets/warning-circle-filled.svg"
+              alt="warning-circle-filled.svg"
+            />
+            <p class="Content-span">O item foi removido da lista</p>
+            <img src="./src/assets/delete-small.svg" alt="delete-small.svg" />
+          </span>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
