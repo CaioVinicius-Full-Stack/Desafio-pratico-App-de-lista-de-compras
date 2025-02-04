@@ -207,6 +207,7 @@ body {
               background-image: url(../assets/Frame.svg);
               background-position: center;
               background-repeat: no-repeat;
+              cursor: pointer;
             }
           }
         }
@@ -219,6 +220,217 @@ body {
         align-items: flex-start;
         gap: 0.5rem;
 
+        border-radius: 0.75rem;
+        background: var(--color-danger);
+
+        p {
+          flex: 1 0 0;
+          color: var(--always-white);
+
+          /* label */
+          font-family: var(--font-family);
+          font-size: 1rem;
+          font-weight: 600;
+          line-height: 20px; /* 125% */
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1366px) {
+  .Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+
+    padding: 1rem 1rem;
+
+    .header {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4375rem;
+
+      .Time {
+        img {
+          display: none;
+        }
+      }
+      & .Status-Icons {
+        img {
+          display: none;
+        }
+      }
+    }
+
+    .Content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 3.4375rem;
+      width: 100%;
+      padding: 0px 1rem 0rem 1rem;
+      margin-top: 2.5rem;
+
+      .Content-Header {
+        color: var(--color-brand);
+
+        /* link */
+        font-family: var(--font-family);
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 16px; /* 114.286% */
+        gap: 0.25rem;
+      }
+
+      h1 {
+        width: 20.3125rem;
+        color: var(--content-primary);
+
+        /* title */
+        font-family: var(--font-family);
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 32px; /* 133.333% */
+      }
+
+      .form-tasks {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0.625rem;
+        width: 100%;
+
+        input {
+          display: flex;
+          width: 100%;
+          height: 2.75rem;
+          padding: 0rem 1.125rem;
+          align-items: center;
+          gap: 0.5rem;
+
+          color: var(--content-tertiary);
+
+          /* Input */
+          font-family: var(--font-family);
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 140%; /* 22.4px */
+
+          border-radius: 0.75rem;
+          border: 2px solid var(--border-primary);
+          background: var(--background-secondary);
+        }
+
+        button {
+          display: flex;
+          width: 10rem;
+          height: 2.75rem;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5rem;
+
+          border-radius: 0.75rem;
+          border: none;
+          background: var(--color-brand);
+
+          color: var(--always-white);
+          text-align: center;
+          font-family: var(--font-family);
+          font-size: 1rem;
+          font-weight: 600;
+          line-height: 20px; /* 125% */
+          cursor: pointer;
+        }
+      }
+
+      .list {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+
+        .itens {
+          display: flex;
+          padding: 0.75rem;
+          align-items: center;
+          gap: 0.75rem;
+          width: 100%;
+          border-radius: 0.75rem;
+          background: var(--background-secondary);
+          position: relative;
+
+          .checkbox-image {
+            width: 1rem;
+            height: 1rem;
+            background: url(../assets/state=Default.svg) no-repeat center;
+            position: relative;
+          }
+
+          input[type="checkbox"] {
+            all: unset;
+            position: absolute;
+            left: 1;
+            width: 1rem;
+            height: 1rem;
+            cursor: pointer;
+          }
+
+          .itens:hover .checkbox-image,
+          .itens:focus-within .checkbox-image {
+            background-image: url(../assets/state=hover.svg);
+          }
+
+          &:has(:checked) .checkbox-image {
+            background-image: url(../assets/state=selected.svg);
+          }
+
+          .item {
+            display: flex;
+            align-items: flex-end;
+            gap: 0.5rem;
+            flex: 1 0 0;
+          }
+
+          .delete-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            button {
+              display: flex;
+              padding: 0.5rem;
+              justify-content: center;
+              align-items: center;
+              gap: 0.5rem;
+              width: 2rem;
+              height: 2rem;
+              border: none;
+              border-radius: 12px;
+              background-image: url(../assets/Frame.svg);
+              background-position: center;
+              background-repeat: no-repeat;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .alert {
+        display: none;
+        width: 100%;
+        padding: 0.75rem;
+        align-items: flex-start;
+        gap: 0.5rem;
         border-radius: 0.75rem;
         background: var(--color-danger);
 
