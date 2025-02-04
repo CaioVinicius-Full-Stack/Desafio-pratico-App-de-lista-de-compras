@@ -36,7 +36,7 @@ body {
   background: var(--background-primary);
 }
 
-@media (min-width: 375px) and (max-width: 480px) {
+@media (min-width: 375px) and (max-width: 767px) {
   .Container {
     display: flex;
     flex-direction: column;
