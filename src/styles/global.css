@@ -213,7 +213,7 @@ body {
       }
 
       .alert {
-        display: flex;
+        display: none;
         width: 20.4375rem;
         padding: 0.75rem;
         align-items: flex-start;
