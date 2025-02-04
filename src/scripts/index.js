@@ -10,7 +10,7 @@ const showAlert = () => {
   }, 4000);
 }
 
-const deleteTask = () => {
+const deleteTask = (item) => {
   const checkbox = item.querySelector('input[type="checkbox"]');
   if (checkbox && checkbox.checked) {
     item.remove();
@@ -20,10 +20,6 @@ const deleteTask = () => {
   }
 }
 
-const removeItem = (item) => {
-  item.remove();
-  showAlert();
-}
 
 const addTask = (nomeItem) => {
   const li = document.createElement('li');
@@ -52,7 +48,8 @@ const addTask = (nomeItem) => {
   li.appendChild(itemDiv);
   li.appendChild(deleteDiv);
 
-  botaoRemover.addEventListener('click', () => removeItem(li));
+  botaoRemover.addEventListener('click', () => deleteTask(li));
+
 
   lista.appendChild(li);
 }
@@ -73,9 +70,10 @@ const itensExistentes = document.querySelectorAll('.list li');
 itensExistentes.forEach(item => {
   const botao = item.querySelector('.delete-item button');
   if (botao) {
-    botao.addEventListener('click', () => removeItem(item));
+    botao.addEventListener('click', () => deleteTask(item));
   }
 });
+
 
 const closeAlert = alerta.querySelector('img[alt = "delete-small.svg"]')
 if (closeAlert) {
